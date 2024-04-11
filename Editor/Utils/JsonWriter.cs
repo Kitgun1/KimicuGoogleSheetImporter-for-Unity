@@ -7,6 +7,13 @@ namespace Kimicu.ExcelImporter.Utils
         public static void SaveJson(string nameFile, string json, string path)
         {
             string fullPath = Path.Combine(path, nameFile);
+            string directory = Path.GetDirectoryName(fullPath);
+
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
             File.WriteAllText(fullPath, json);
         }
         
