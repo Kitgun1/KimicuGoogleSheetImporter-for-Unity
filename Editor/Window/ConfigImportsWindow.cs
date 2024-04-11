@@ -1,4 +1,6 @@
 ﻿#if UNITY_EDITOR
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEditor;
 using UnityEngine;
 
@@ -45,13 +47,7 @@ namespace Kimicu.ExcelImporter
             GUILayout.Label("PARSER NAME:");
             _parserScriptName = EditorGUILayout.TextField(_parserScriptName);
 
-            if (GUILayout.Button("Load Items Settings"))
-            {
-                GameSettings gameSettings = ConfigImportsMenu.LoadSettings(_config.SettingsFileName);
-                ConfigImportsMenu.LoadItemsSettings(_config.CredentialsPath, _config.SpreadsheetID,
-                    _config.ItemsSheetName, _config.SettingsFileName, 
-                    ParserUtils.GetParserByName(_parserScriptName,gameSettings), gameSettings);
-            }
+            if (GUILayout.Button("Load Items Settings")) Task.Run(LoadSettings);
         }
 
         private ConfigImportSettings CreateConfigSettings()
@@ -72,6 +68,14 @@ namespace Kimicu.ExcelImporter
                 Debug.LogWarning("Config creation cancelled.");
                 return null;
             }
+        }
+
+        private async void LoadSettings()
+        {
+            var gameSettings = await ConfigImportsMenu.LoadSettings(_config.SettingsFileName);
+            ConfigImportsMenu.LoadItemsSettings(_config.CredentialsPath, _config.SpreadsheetID, _config.ItemsSheetName,
+                _config.SettingsFileName, ParserUtils.GetParserByName(_parserScriptName, gameSettings), gameSettings);
+            AssetDatabase.Refresh();
         }
     }
 }

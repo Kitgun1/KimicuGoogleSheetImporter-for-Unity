@@ -1,4 +1,5 @@
-﻿using Kimicu.ExcelImporter.Utils;
+﻿using System.Threading.Tasks;
+using Kimicu.ExcelImporter.Utils;
 using UnityEngine;
 
 namespace Kimicu.ExcelImporter
@@ -13,12 +14,12 @@ namespace Kimicu.ExcelImporter
             await sheetImporter.DownloadAndParseSheet(itemsSheetName, googleSheetParser);
             
             var jsonForSaving = JsonUtility.ToJson(gameSettings);
-            JsonWriter.SaveJson(settingsFileName, jsonForSaving, "Resources");
+            await JsonWriter.SaveJson(settingsFileName, jsonForSaving);
         }
 
-        public static GameSettings LoadSettings(string settingsFileName)
+        public static async Task<GameSettings> LoadSettings(string settingsFileName)
         {
-            string jsonLoaded = JsonWriter.LoadJson(settingsFileName, "Resources");
+            string jsonLoaded = await JsonWriter.LoadJson(settingsFileName);
             return !string.IsNullOrEmpty(jsonLoaded)
                 ? JsonUtility.FromJson<GameSettings>(jsonLoaded)
                 : new GameSettings();
