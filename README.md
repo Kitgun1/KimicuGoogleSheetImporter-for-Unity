@@ -4,58 +4,62 @@
 
 Было разработанно специально для игровой студии `ImmortalsGames`
 ## 🟡 Как установить
-Для начала добавьте `NuGetForUnity`:
-<details>
-<summary>Unity 2019.3 или новее</summary>
-
-1) Открыть Package Manager window (Window | Package Manager)
-2) Нажмите кнопку `+` в левом верхнем углу окна и выберите "Add package from git URL..."
-3) Введите следующий URL-адрес и нажмите кнопку `«Добавить»`. 
-    ```
-    https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity 
-    ```
+1) Для начала добавьте `NuGetForUnity`:
+   <details>
+   <summary>Unity 2019.3 или новее</summary>
    
-</details>
-<details>
-<summary>Unity 2019.2 или ранее</summary>
+   1.1. Открыть Package Manager window (Window | Package Manager)<br>
+   1.2. Нажмите кнопку `+` в левом верхнем углу окна и выберите "Add package from git URL..."<br>
+   1.3. Введите следующий URL-адрес и нажмите кнопку `«Добавить»`. 
+   ```
+   https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity 
+   ```
+      
+   </details>
+   <details>
+   <summary>Unity 2019.2 или ранее</summary>
 
-1. Закрыть Unity Editor
-2. Открыть Packages/manifest.json любым текстовым редактором
-3. Вставьте следующую строку после `"dependencies": {`, и сохраните файл.
-    ```json
-    "com.glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
-    ```
-4. Снова откройте проект Unity в редакторе Unity.
+   1.1. Закрыть Unity Editor<br>
+   1.2. Открыть Packages/manifest.json любым текстовым редактором<br>
+   1.3. Вставьте следующую строку после `"dependencies": {`, и сохраните файл.<br>
+   ```json
+   "com.glitchenzo.nugetforunity": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
+   ```
+   1.4. Снова откройте проект Unity в редакторе Unity.
 
-</details>
+   </details>
 
-Далее установите нужные  пакеты через `NuGet` > `Manage NuGet Package`<br>
+2) Далее установите нужные  пакеты через `NuGet` > `Manage NuGet Package`<br>
 ![Unity_AyFMhMdf4u.png](Images~/Unity_AyFMhMdf4u.png)
 
-Далее добавим `Kimicu Google Sheet Importer for Unity`:
-<details>
-<summary>Unity 2019.3 или новее</summary>
+3) Далее добавляем `UniTask`, скачиваем по 
+   [ссылке](https://github.com/Cysharp/UniTask/releases/tag/2.5.4) 
+   и добавляем в  проект.
 
-1) Открыть Package Manager window (Window | Package Manager)
-2) Нажмите кнопку `+` в левом верхнем углу окна и выберите "Add package from git URL..."
-3) Введите следующий URL-адрес и нажмите кнопку `«Добавить»`.
-    ```
-    https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity.git 
-    ```
+4) Далее добавим `Kimicu Google Sheet Importer for Unity`:
+   <details>
+   <summary>Unity 2019.3 или новее</summary>
+   
+   1.1. Открыть Package Manager window (Window | Package Manager)<br>
+   1.2. Нажмите кнопку `+` в левом верхнем углу окна и выберите "Add package from git URL..."<br>
+   1.3. Введите следующий URL-адрес и нажмите кнопку `«Добавить»`.
+   ```
+   https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity.git 
+   ```
 
-</details>
-<details>
-<summary>Unity 2019.2 или ранее</summary>
+   </details>
+   <details>
+   <summary>Unity 2019.2 или ранее</summary>
 
-1. Закрыть Unity Editor
-2. Открыть Packages/manifest.json любым текстовым редактором
-3. Вставьте следующую строку после `"dependencies": {`, и сохраните файл.
-    ```json
-    "com.kimicu.googlesheetimporter": "https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity.git",
-    ```
-4. Снова откройте проект Unity в редакторе Unity.
+   1.1. Закрыть Unity Editor<br>
+   1.2. Открыть Packages/manifest.json любым текстовым редактором<br>
+   1.3. Вставьте следующую строку после `"dependencies": {`, и сохраните файл.<br>
+   ```json
+   "com.kimicu.googlesheetimporter": "https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity.git",
+   ```
+   1.4. Снова откройте проект Unity в редакторе Unity.
 
-</details>
+   </details>
 
 ## 🟠 Получение данных из Google таблицы
 ###  Подготовка
