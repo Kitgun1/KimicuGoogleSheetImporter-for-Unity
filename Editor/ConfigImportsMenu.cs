@@ -10,12 +10,7 @@ namespace Kimicu.ExcelImporter
             var sheetImporter = new GoogleSheetsImporter(credentialsPath, spreadsheetID);
             
             await sheetImporter.DownloadAndParseSheet(itemsSheetName, googleSheetParser);
-
-            foreach (var product in gameSettings.Products)
-            {
-                Debug.Log($"added new item: {product.Id} | {product.Name} | {product.Price}");
-            }
-
+            
             var jsonForSaving = JsonUtility.ToJson(gameSettings);
             PlayerPrefs.SetString(settingsFileName, jsonForSaving);
             Debug.Log($"{jsonForSaving}");
