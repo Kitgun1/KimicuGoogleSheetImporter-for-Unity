@@ -1,0 +1,19 @@
+{
+    "name": "com.kimicu.googlesheetimporter",
+    "version": "0.0.1",
+    "author": "Kimicu",
+    "displayName": "Kimicu Google Sheet Importer for Unity",
+    "description": "A package for convenient import of tables from Google Sheets.",
+    "unity": "2019.1",
+    "changelogUrl": "https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity/blob/main/CHANGELOG.md",
+    "readme": "https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity/blob/main/README.md",
+    "license": "https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity/blob/main/LICENSE",
+    "homepage": "https://github.com/Kitgun1/KimicuGoogleSheetImporter-for-Unity",
+    "samples": [
+        {
+            "displayName": "Product Example",
+            "description": "Simple example small table in google sheet/",
+            "path": "Samples~/ProductExample"
+        }
+    ]
+}
