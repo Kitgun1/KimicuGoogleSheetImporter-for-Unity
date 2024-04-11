@@ -1,6 +1,6 @@
 {
     "name": "com.kimicu.googlesheetimporter",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "Kimicu",
     "displayName": "Kimicu Google Sheet Importer for Unity",
     "description": "A package for convenient import of tables from Google Sheets.",

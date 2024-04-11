@@ -42,7 +42,7 @@ namespace Kimicu.ExcelImporter
             GUILayout.Label("SETTINGS_FILE_NAME:");
             _config.SettingsFileName = EditorGUILayout.TextField(_config.SettingsFileName);
 
-            GUILayout.Label("SETTINGS_FILE_NAME:");
+            GUILayout.Label("PARSER NAME:");
             _parserScriptName = EditorGUILayout.TextField(_parserScriptName);
 
             if (GUILayout.Button("Load Items Settings"))
