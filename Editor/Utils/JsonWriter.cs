@@ -20,12 +20,13 @@ namespace Kimicu.ExcelImporter.Utils
         public static string LoadJson(string nameFile, string path)
         {
             string fullPath = Path.Combine(path, nameFile);
-            if (File.Exists(fullPath))
+    
+            if (!File.Exists(fullPath))
             {
-                return File.ReadAllText(fullPath);
+                File.WriteAllText(fullPath, "{}"); 
             }
 
-            throw new FileNotFoundException($"File '{nameFile}' not found at path '{path}'.");
+            return File.ReadAllText(fullPath);
         }
     }
 }
