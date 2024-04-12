@@ -123,6 +123,8 @@
 3) `SPREADSHEET_ID` берем из ссылки таблицы
    ![chrome_6cKPSWuWVN.png](Images%7E%2Fchrome_6cKPSWuWVN.png)
 4) `CREDENTIALS_PATH` - json файл с кренделями, который в лежит в корневой папке проекта
-5) `ITEMS_SHEET_NAME` - Название листа
-6) `SETTINGS_FILE_NAME` - Название файла, в котором будет json строка с данными из таблицы
-7) `PARSER NAME` - название скрипта парсера, который унаследован от `IGoogleSheetParser`
+   Получить его можно в Google Developer Console, создав новый проект, добавив сервис аккаунт и ключ к нему
+6) `ITEMS_SHEET_NAME` - Название листа из Google Sheets
+7) `SETTINGS_FILE_NAME` - Название файла, в котором будет json строка с данными из таблицы
+8) `PARSER NAME` - название скрипта парсера, который унаследован от `IGoogleSheetParser`
+9) После нажатия на кнопку `Load Items Settings`, задите в папке `Resources` и сделайте Refresh папки
