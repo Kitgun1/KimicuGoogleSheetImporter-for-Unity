@@ -1,12 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
 
 namespace Kimicu.ExcelImporter.Utils
 {
-    public static class JsonWriter
+    public static class JsonUtils
     {
         public static async Task SaveJson(string nameFile, string json)
         {
@@ -27,7 +29,7 @@ namespace Kimicu.ExcelImporter.Utils
 
         public static async Task<string> LoadJson(string nameFile)
         {
-            string path = Path.Combine(Application.dataPath, @"Assets\Resources\Tables");
+            string path = Path.Combine(Application.dataPath, @"Resources\Tables");
             string fullPath = Path.Combine(path, nameFile + ".json");
             string directory = Path.GetDirectoryName(fullPath);
 

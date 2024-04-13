@@ -14,12 +14,12 @@ namespace Kimicu.ExcelImporter
             await sheetImporter.DownloadAndParseSheet(itemsSheetName, googleSheetParser);
             
             var jsonForSaving = JsonUtility.ToJson(gameSettings);
-            await JsonWriter.SaveJson(settingsFileName, jsonForSaving);
+            await JsonUtils.SaveJson(settingsFileName, jsonForSaving);
         }
 
         public static async Task<GameSettings> LoadSettings(string settingsFileName)
         {
-            string jsonLoaded = await JsonWriter.LoadJson(settingsFileName);
+            string jsonLoaded = await JsonUtils.LoadJson(settingsFileName);
             return !string.IsNullOrEmpty(jsonLoaded)
                 ? JsonUtility.FromJson<GameSettings>(jsonLoaded)
                 : new GameSettings();
